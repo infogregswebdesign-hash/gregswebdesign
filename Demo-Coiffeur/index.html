@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FADEHOUSE Barbershop – Herrenhaarschnitte in Zürich (Konzeptprojekt)</title>
+<meta name="description" content="Konzeptprojekt: Moderne Website für einen Barbershop in Zürich. Erstellt von GregsWebdesign als Beispielprojekt.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="demo-banner">
+    <span>Konzeptprojekt von <a href="https://gregswebdesign.netlify.app" target="_blank" rel="noopener">GregsWebdesign</a> — kein echter Betrieb</span>
+    <a href="https://gregswebdesign.netlify.app" class="demo-banner-btn" target="_blank" rel="noopener">
+      ← Zur Hauptseite
+    </a>
+  </div>
+  <div class="container">
+    <a href="#start" class="brand">FADEHOUSE<span class="dot">.</span></a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#start">Home</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#kontakt" class="btn btn-primary btn-sm desktop-only">Termin anfragen</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <a href="#start">Home</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#kontakt" class="btn btn-primary btn-block">Termin anfragen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="start">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Barbershop · Zürich</span>
+        <h1>Präzision.<br>Stil.<br><span>Charakter.</span></h1>
+        <p class="hero-sub">Moderne Herrenschnitte, klassische Rasuren und ehrliches Handwerk — mitten in Zürich.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+          <a href="#galerie" class="btn btn-secondary">Galerie ansehen</a>
+        </div>
+        <ul class="hero-meta">
+          <li><strong>Mo–Sa</strong> Geöffnet</li>
+          <li><strong>Walk-in</strong> & Termin</li>
+          <li><strong>Zürich</strong> Kreis 4</li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="Bilder/hero-cut.jpg" alt="Barbier schneidet einem Kunden die Haare mit der Maschine im FADEHOUSE Barbershop" width="933" height="1400" loading="eager">
+        <div class="hero-visual-badge">
+          <strong>Präzisionsarbeit</strong>
+          Jeder Schnitt von Hand
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LEISTUNGEN ========== -->
+  <section class="section-pad" id="leistungen">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Leistungen</span>
+        <h2>Unsere Preise</h2>
+        <p>Faire, transparente Preise für jeden Anspruch — vom klassischen Schnitt bis zum Komplettpaket.</p>
+      </div>
+
+      <div class="services-grid reveal-stagger">
+        <div class="card service-card">
+          <div>
+            <h3>Herrenhaarschnitt</h3>
+            <p>Waschen, Schneiden, Styling</p>
+          </div>
+          <div class="service-price">45<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Bart Trim</h3>
+            <p>Konturieren &amp; Pflege</p>
+          </div>
+          <div class="service-price">25<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Haarschnitt + Bart</h3>
+            <p>Das Komplettpaket</p>
+          </div>
+          <div class="service-price">65<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Klassische Rasur</h3>
+            <p>Mit heissem Handtuch</p>
+          </div>
+          <div class="service-price">35<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Kinderhaarschnitt</h3>
+            <p>Bis 12 Jahre</p>
+          </div>
+          <div class="service-price">30<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Waschen &amp; Styling</h3>
+            <p>Als Ergänzung</p>
+          </div>
+          <div class="service-price">15<span> CHF</span></div>
+        </div>
+      </div>
+      <p class="services-note">Alle Preise verstehen sich pro Behandlung. Änderungen vorbehalten.</p>
+    </div>
+  </section>
+
+  <!-- ========== GALERIE ========== -->
+  <section class="section-pad" id="galerie" style="background:var(--bg-alt);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Galerie</span>
+        <h2>Frisch geschnitten</h2>
+        <p>Ein Einblick in unsere Arbeit — von klassisch bis modern.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item g-large">
+          <img src="Bilder/gallery-1.jpg" alt="Barbier stylt die Haare eines Kunden mit Kamm und Haarspray" loading="lazy">
+        </div>
+        <div class="gallery-item g-tall">
+          <img src="Bilder/gallery-4.jpg" alt="Barbier trimmt den Bart eines Kunden im klassischen Barbierstuhl" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="Bilder/gallery-3.jpg" alt="Kunde mit Buzz Cut und scharfer Haarlinie lächelt" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="Bilder/gallery-2.jpg" alt="Kunde mit Pompadour-Fade-Haarschnitt im Freien" loading="lazy">
+        </div>
+        <div class="gallery-item g-tall">
+          <img src="Bilder/gallery-5.jpg" alt="Kunde mit modernem Kurzhaarschnitt und Vollbart in der Stadt" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ÜBER UNS ========== -->
+  <section class="section-pad" id="ueber-uns">
+    <div class="container about-wrap">
+      <div class="about-visual reveal">
+        <img src="Bilder/about.jpg" alt="Kunde mit scharfem Seitenscheitel-Fade vor Backsteinwand" loading="lazy">
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">Über uns</span>
+        <h2 style="font-size:clamp(32px,4vw,48px); margin-bottom:22px;">Handwerk mit Charakter</h2>
+        <p>Bei FADEHOUSE verbinden wir klassisches Barbier-Handwerk mit modernem Stilbewusstsein. Jeder Schnitt wird individuell auf Kopfform, Haarstruktur und persönlichen Stil abgestimmt.</p>
+        <p>Wir nehmen uns Zeit — für ein präzises Ergebnis und ein entspanntes Erlebnis, ganz ohne Hektik.</p>
+        <div class="about-stats">
+          <div>
+            <strong style="font-size:15px;">Präzisionsschnitt</strong>
+            <span>Individuell auf dich abgestimmt</span>
+          </div>
+          <div>
+            <strong style="font-size:15px;">Klassische Rasur</strong>
+            <span>Mit heissem Handtuch</span>
+          </div>
+          <div>
+            <strong style="font-size:15px;">Entspannte Atmosphäre</strong>
+            <span>Ohne Hektik, mit Zeit für dich</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KONTAKT ========== -->
+  <section class="section-pad" id="kontakt" style="background:var(--bg-alt);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Termin anfragen</h2>
+        <p>Ruf uns an oder komm spontan vorbei — wir freuen uns auf dich.</p>
+      </div>
+
+      <div class="contact-wrap reveal">
+        <div>
+          <span class="eyebrow" style="margin-bottom:20px;">Öffnungszeiten</span>
+          <div class="hours-list">
+            <div class="hours-row"><span>Montag</span><span>Geschlossen</span></div>
+            <div class="hours-row"><span>Dienstag – Freitag</span><span>09:00 – 19:00</span></div>
+            <div class="hours-row"><span>Samstag</span><span>09:00 – 16:00</span></div>
+            <div class="hours-row closed"><span>Sonntag</span><span>Geschlossen</span></div>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow" style="margin-bottom:20px;">Kontaktdaten</span>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Adresse</strong>
+                <span>Langstrasse 84, 8004 Zürich</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Telefon</strong>
+                <a href="tel:+41442501234">044 250 12 34</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="m3 7 9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+              </div>
+              <div>
+                <strong>E-Mail</strong>
+                <a href="mailto:info@fadehouse-beispiel.ch">info@fadehouse-beispiel.ch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="footer-brand">FADEHOUSE<span style="color:var(--accent);">.</span></span>
+    <span class="footer-credit">Konzeptprojekt von <a href="https://gregswebdesign.netlify.app" target="_blank" rel="noopener">GregsWebdesign</a> — kein echter Betrieb.</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
