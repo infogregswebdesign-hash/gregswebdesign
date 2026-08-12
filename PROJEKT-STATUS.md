@@ -26,14 +26,16 @@ Portfolio-Website für den nebenberuflichen Webdesign-Service "GregsWebdesign" (
 - Farbschema Hauptseite: hell, Blau-Akzent (#2A4CE0). Demo-Seite: dunkel, Gold-Akzent (#C9A15C), eigene Schriftart Bebas Neue
 
 ## Offene Punkte / als Nächstes geplant
-- GitHub-Repo ist lokal initialisiert (erster Commit gemacht), aber noch **nicht** mit github.com verbunden — Nutzer wollte das "an einem anderen Tag" fertig einrichten (siehe Anleitung weiter unten)
+- Netlify-Auto-Deploy einrichten: Site auf app.netlify.com mit dem GitHub-Repo verknüpfen (Site configuration → Build & deploy → Link repository → Repo `infogregswebdesign-hash/gregswebdesign`, Branch `master`, Build command leer, Publish directory `.`). Danach reicht `git push` statt manuellem Drag & Drop.
 - Kein eigenes Foto bei "Über mich" (noch Platzhalter-Initialen "GG")
 - Keine Social-Media-Links im Footer (noch keine Accounts)
 - Weitere Demo-Projekte (Auto Detailing, Personal Trainer) sind auf der Hauptseite als reine Konzeptkarten ohne echte Demo-Website hinterlegt — evtl. später wie beim Barbershop ausbauen
 - Eigene Domain noch nicht gekauft (aktuell nur `.netlify.app`-Subdomain)
 
-## GitHub-Einrichtung (angefangen, nicht abgeschlossen)
-Lokales Git-Repo existiert bereits (`git log` zeigt Commits). Für die Fortsetzung: GitHub Desktop installieren (desktop.github.com), mit GitHub-Konto anmelden, "Add Local Repository" auf diesen Ordner, dann "Publish repository".
+## GitHub-Einrichtung (abgeschlossen, 2026-08-12)
+Repo ist live und public: https://github.com/infogregswebdesign-hash/gregswebdesign
+GitHub-Account: infogregswebdesign-hash. Anmeldung lokal über GitHub CLI (`gh`), installiert per winget (User-Scope, da MSI-Installer Admin-Elevation braucht die im Terminal nicht klappt — ggf. bei zukünftigen Installs `--scope user` verwenden).
+Solange Netlify noch nicht mit dem Repo verknüpft ist (siehe oben), bleibt der `- Deploy`-Ordner + manuelles Drag & Drop auf Netlify weiterhin der Weg, um Änderungen live zu bringen.
 
 ## Nach jeder Änderung
 Denk daran: Änderungen an den Dateien hier aktualisieren die Live-Website NICHT automatisch. Der `- Deploy`-Ordner (falls vorhanden) muss aktualisiert und erneut auf Netlify gezogen werden.
