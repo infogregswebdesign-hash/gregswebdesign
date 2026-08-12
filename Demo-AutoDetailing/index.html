@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX DETAILING – Fahrzeugaufbereitung in Zürich (Konzeptprojekt)</title>
+<meta name="description" content="Konzeptprojekt: Moderne Website für einen Fahrzeugaufbereiter in Zürich. Erstellt von GregsWebdesign als Beispielprojekt.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="demo-banner">
+    <span>Konzeptprojekt von <a href="https://gregswebdesign.netlify.app" target="_blank" rel="noopener">GregsWebdesign</a> — kein echter Betrieb</span>
+    <a href="https://gregswebdesign.netlify.app" class="demo-banner-btn" target="_blank" rel="noopener">
+      ← Zur Hauptseite
+    </a>
+  </div>
+  <div class="container">
+    <a href="#start" class="brand">APEX<span class="dot">.</span></a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#start">Home</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#video-showcase">Einblick</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#kontakt" class="btn btn-primary btn-sm desktop-only">Termin anfragen</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <a href="#start">Home</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#video-showcase">Einblick</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#kontakt" class="btn btn-primary btn-block">Termin anfragen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="start">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Fahrzeugaufbereitung · Zürich</span>
+        <h1>Glanz.<br>Präzision.<br><span>Perfektion.</span></h1>
+        <p class="hero-sub">Professionelle Fahrzeugaufbereitung, Politur und Versiegelung — für ein Ergebnis wie am ersten Tag.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+          <a href="#galerie" class="btn btn-secondary">Galerie ansehen</a>
+        </div>
+        <ul class="hero-meta">
+          <li><strong>Mo–Fr</strong> Geöffnet</li>
+          <li><strong>Termin</strong> nach Vereinbarung</li>
+          <li><strong>Zürich</strong> Kreis 5</li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="Bilder/hero-detailing.jpg" alt="Frisch aufbereitetes Fahrzeug in der APEX DETAILING Werkstatt" width="2160" height="3240" loading="eager">
+        <div class="hero-visual-badge">
+          <strong>Detailarbeit</strong>
+          Jedes Fahrzeug von Hand
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LEISTUNGEN ========== -->
+  <section class="section-pad" id="leistungen">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Leistungen</span>
+        <h2>Unsere Preise</h2>
+        <p>Faire, transparente Preise für jeden Anspruch — von der Handwäsche bis zur Keramikversiegelung.</p>
+      </div>
+
+      <div class="services-grid reveal-stagger">
+        <div class="card service-card">
+          <div>
+            <h3>Aussenreinigung</h3>
+            <p>Handwäsche &amp; Felgenreinigung</p>
+          </div>
+          <div class="service-price">49<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Innenreinigung</h3>
+            <p>Saugen, Polstern, Kunststoffpflege</p>
+          </div>
+          <div class="service-price">69<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Politur &amp; Versiegelung</h3>
+            <p>Lackaufbereitung mit Glanzversiegelung</p>
+          </div>
+          <div class="service-price">149<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Keramikversiegelung</h3>
+            <p>Langfristiger Lackschutz</p>
+          </div>
+          <div class="service-price">349<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Lederpflege</h3>
+            <p>Reinigung &amp; Imprägnierung</p>
+          </div>
+          <div class="service-price">39<span> CHF</span></div>
+        </div>
+        <div class="card service-card">
+          <div>
+            <h3>Motorraum-Reinigung</h3>
+            <p>Als Ergänzung</p>
+          </div>
+          <div class="service-price">45<span> CHF</span></div>
+        </div>
+      </div>
+      <p class="services-note">Alle Preise verstehen sich pro Fahrzeug (Mittelklasse). Änderungen vorbehalten.</p>
+    </div>
+  </section>
+
+  <!-- ========== VIDEO SHOWCASE ========== -->
+  <section class="section-pad" id="video-showcase" style="background:var(--bg-alt);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Einblick</span>
+        <h2>Handwerk in Bewegung</h2>
+        <p>Ein Blick auf Politur, Versiegelung und das Finish, das den Unterschied macht.</p>
+      </div>
+
+      <div class="video-grid reveal-stagger">
+        <div class="video-item">
+          <video src="Videos/politur-finish.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <div class="video-caption">Politur &amp; Finish</div>
+        </div>
+        <div class="video-item">
+          <video src="Videos/detailarbeit.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <div class="video-caption">Detailarbeit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERIE ========== -->
+  <section class="section-pad" id="galerie">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Galerie</span>
+        <h2>Frisch aufbereitet</h2>
+        <p>Ein Einblick in unsere Arbeit — von der Werkstatt bis zum fertigen Fahrzeug.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item g-large">
+          <img src="Bilder/gallery-1.jpg" alt="Sportwagen in modernem Showroom" loading="lazy">
+        </div>
+        <div class="gallery-item g-tall">
+          <img src="Bilder/gallery-2.jpg" alt="Frisch aufbereitete Fahrzeuge in der Werkstatt" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="Bilder/gallery-3.jpg" alt="Fahrzeuge im Showroom" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ÜBER UNS ========== -->
+  <section class="section-pad" id="ueber-uns" style="background:var(--bg-alt);">
+    <div class="container about-wrap">
+      <div class="about-visual reveal">
+        <img src="Bilder/about.jpg" alt="Detailaufnahme eines aufbereiteten Fahrzeuginnenraums" loading="lazy">
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">Über uns</span>
+        <h2 style="font-size:clamp(32px,4vw,48px); margin-bottom:22px;">Handwerk mit Liebe zum Detail</h2>
+        <p>Bei APEX DETAILING verbinden wir handwerkliche Präzision mit hochwertigen Produkten. Jedes Fahrzeug wird individuell behandelt — von der Handwäsche bis zur Keramikversiegelung.</p>
+        <p>Wir nehmen uns Zeit — für ein Ergebnis, das überzeugt, und einen Lack, der geschützt bleibt.</p>
+        <div class="about-stats">
+          <div>
+            <strong style="font-size:15px;">Handpolitur</strong>
+            <span>Schonend &amp; gründlich</span>
+          </div>
+          <div>
+            <strong style="font-size:15px;">Premium-Produkte</strong>
+            <span>Für nachhaltigen Glanz</span>
+          </div>
+          <div>
+            <strong style="font-size:15px;">Persönliche Beratung</strong>
+            <span>Individuell auf dein Fahrzeug</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KONTAKT ========== -->
+  <section class="section-pad" id="kontakt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Termin anfragen</h2>
+        <p>Ruf uns an oder schreib uns — wir melden uns kurzfristig zurück.</p>
+      </div>
+
+      <div class="contact-wrap reveal">
+        <div>
+          <span class="eyebrow" style="margin-bottom:20px;">Öffnungszeiten</span>
+          <div class="hours-list">
+            <div class="hours-row"><span>Montag – Freitag</span><span>08:00 – 18:00</span></div>
+            <div class="hours-row"><span>Samstag</span><span>09:00 – 14:00</span></div>
+            <div class="hours-row closed"><span>Sonntag</span><span>Geschlossen</span></div>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow" style="margin-bottom:20px;">Kontaktdaten</span>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Adresse</strong>
+                <span>Industriestrasse 12, 8005 Zürich</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Telefon</strong>
+                <a href="tel:+41445557890">044 555 78 90</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="m3 7 9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+              </div>
+              <div>
+                <strong>E-Mail</strong>
+                <a href="mailto:info@apexdetailing-beispiel.ch">info@apexdetailing-beispiel.ch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="footer-brand">APEX<span style="color:var(--accent);">.</span></span>
+    <span class="footer-credit">Konzeptprojekt von <a href="https://gregswebdesign.netlify.app" target="_blank" rel="noopener">GregsWebdesign</a> — kein echter Betrieb.</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
