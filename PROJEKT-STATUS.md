@@ -32,10 +32,9 @@ Portfolio-Website für den nebenberuflichen Webdesign-Service "GregsWebdesign" (
 - Für Videos/grosse Bilder in Demo-Projekten: **ffmpeg** ist lokal installiert (winget, User-Scope) — vor dem Commit grosse 4K-Videos/Bilder komprimieren (z.B. `-vf scale=1280:720 -crf 27 -an`), sonst wird das Repo unnötig aufgebläht
 
 ## Offene Punkte / als Nächstes geplant
-- Kein eigenes Foto bei "Über mich" (noch Platzhalter-Initialen "GG")
 - Keine Social-Media-Links im Footer (noch keine Accounts)
 - Eigene Domain noch nicht gekauft (aktuell nur `.netlify.app`-Subdomain)
-- Alle drei Portfolio-Demos (Barbershop, Auto Detailing, Personal Trainer) sind jetzt fertig und verlinkt — nächster sinnvoller Schritt wäre eher Polish an der Hauptseite als weitere Demos
+- Alle drei Portfolio-Demos (Barbershop, Auto Detailing, Personal Trainer) sind fertig und verlinkt, echtes Foto bei "Über mich" ist drin — Website ist inhaltlich/technisch bereit. Nächster sinnvoller Schritt: aktive Kundenakquise (lokale Betriebe anschreiben, Seite teilen) statt weiterer Website-Arbeit
 
 ## GitHub-Einrichtung (abgeschlossen, 2026-08-12)
 Repo ist live und public: https://github.com/infogregswebdesign-hash/gregswebdesign
