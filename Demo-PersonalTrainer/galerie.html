@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie – IRONWILL Coaching (Konzeptprojekt)</title>
+<meta name="description" content="Konzeptprojekt: Bilder- und Video-Galerie eines Personal Trainers in Zürich. Erstellt von GregsWebdesign als Beispielprojekt.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="demo-banner">
+    <span>Konzeptprojekt von <a href="https://gregswebdesign.netlify.app" target="_blank" rel="noopener">GregsWebdesign</a> — kein echter Betrieb</span>
+    <a href="https://gregswebdesign.netlify.app" class="demo-banner-btn" target="_blank" rel="noopener">
+      ← Zur Hauptseite
+    </a>
+  </div>
+  <div class="container">
+    <a href="index.html" class="brand">IRONWILL<span class="dot">.</span></a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="index.html">Home</a>
+      <a href="programme.html">Programme</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="galerie.html" aria-current="page">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="kontakt.html" class="btn btn-primary btn-sm desktop-only">Erstgespräch buchen</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <a href="index.html">Home</a>
+    <a href="programme.html">Programme</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="galerie.html" aria-current="page">Galerie</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="kontakt.html" class="btn btn-primary btn-block">Erstgespräch buchen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <div class="page-head container">
+    <span class="eyebrow">Galerie</span>
+    <h1>Einblicke ins Training</h1>
+    <p>Echte Trainingsmomente — von der ersten Einheit bis zum harten Finish.</p>
+  </div>
+
+  <!-- ========== VIDEOS ========== -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Videos</span>
+        <h2>Training in Bewegung</h2>
+      </div>
+      <div class="video-grid reveal-stagger">
+        <div class="video-item v-portrait">
+          <video src="Videos/training-1.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <div class="video-caption">Kraftaufbau</div>
+        </div>
+        <div class="video-item v-landscape">
+          <video src="Videos/training-2.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <div class="video-caption">Technik-Coaching</div>
+        </div>
+        <div class="video-item v-landscape">
+          <video src="Videos/training-3.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <div class="video-caption">Functional Training</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOTOS ========== -->
+  <section class="section-pad" style="background:var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Fotos</span>
+        <h2>Aus dem Training</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item g-large">
+          <img src="Bilder/hero-training.jpg" alt="Personal Trainer coacht einen Klienten beim Bankdrücken" loading="lazy">
+        </div>
+        <div class="gallery-item g-tall">
+          <img src="Bilder/about-trainer.jpg" alt="Personal Trainer coacht einen Klienten lächelnd beim Krafttraining" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="Bilder/gallery-ropes.jpg" alt="Coaching beim Battle-Rope-Training im Freien" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="Bilder/gallery-coaching.jpg" alt="Nahaufnahme eines Coachings mit Kurzhanteln" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Neugierig geworden?</h2>
+          <p>Vereinbare ein kostenloses Erstgespräch und starte dein Training.</p>
+        </div>
+        <a href="kontakt.html" class="btn btn-primary">Jetzt anfragen</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="footer-brand">IRONWILL<span style="color:var(--accent);">.</span></span>
+    <span class="footer-credit">Konzeptprojekt von <a href="https://gregswebdesign.netlify.app" target="_blank" rel="noopener">GregsWebdesign</a> — kein echter Betrieb.</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
