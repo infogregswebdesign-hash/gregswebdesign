@@ -423,8 +423,10 @@ section { position: relative; }
 .badge-left { top: 12%; left: -22px; }
 .badge-right { bottom: 10%; right: -22px; }
 
-@media (max-width: 860px) {
-  .hero-float-badge { display: none; }
+@media (max-width: 480px) {
+  .hero-float-badge { font-size: 12px; padding: 8px 13px; gap: 6px; }
+  .badge-left { left: -12px; }
+  .badge-right { right: -12px; }
 }
 @media (max-width: 640px) {
   .hero-mock-navlinks { display: none; }
