@@ -10,6 +10,7 @@ Portfolio-Website für den nebenberuflichen Webdesign-Service "GregsWebdesign" (
 - Demo-Projekt (Barbershop): https://gregswebdesign.netlify.app/demo-coiffeur/
 - Demo-Projekt (Auto Detailing): https://gregswebdesign.netlify.app/demo-autodetailing/
 - Demo-Projekt (Personal Trainer, mehrseitig): https://gregswebdesign.netlify.app/demo-personaltrainer/
+- Demo-Projekt (Damencoiffeur, mehrseitig): https://gregswebdesign.netlify.app/demo-damensalon/
 
 ## Struktur
 - `index.html`, `impressum.html`, `datenschutz.html` — Hauptseite (Onepage + 2 rechtliche Seiten)
@@ -18,6 +19,7 @@ Portfolio-Website für den nebenberuflichen Webdesign-Service "GregsWebdesign" (
 - `Demo-Coiffeur/` — eigenständige Demo-Website "FADEHOUSE Barbershop" (Onepager, dunkles Design, Gold-Akzent #C9A15C, Bebas Neue), verlinkt von der Portfolio-Sektion der Hauptseite
 - `Demo-AutoDetailing/` — eigenständige Demo-Website "APEX DETAILING" (Onepager, dunkles Design, Rot-Akzent #D7263D, Bebas Neue, inkl. Video-Sektion), verlinkt von der Portfolio-Sektion
 - `Demo-PersonalTrainer/` — eigenständige Demo-Website "IRONWILL Coaching" (**mehrseitig**: index/programme/ueber-mich/galerie/kontakt.html, dunkles Design, Orange-Akzent #FF7A1A, Schriftart Anton), verlinkt von der Portfolio-Sektion
+- `Demo-Damensalon/` — eigenständige Demo-Website "AVELINE Hair Studio" (**mehrseitig**: index/leistungen/ueber-uns/galerie/kontakt.html, **helles** Design (einziges helles unter den Demos), Rosé-Akzent #B8757F, Schriftart Playfair Display), verlinkt von der Portfolio-Sektion
 - `Bilder_beispiel_webseite/` — Rohbilder (lizenzfreie Pexels-Fotos) für die Barbershop-Demo
 - `robots.txt`, `sitemap.xml` — für Google-Indexierung (siehe SEO-Abschnitt unten)
 - `Akquise/Akquise-Tracker.xlsx` — Excel mit Tab "Übersicht" (automatische Zählungen per Formel) und Tab "Akquise-Tracker" (Liste aller angeschriebenen Firmen). **Nicht in Git** (lokale Arbeitsdatei, nur auf diesem Rechner, kein Grund sie zu committen)
@@ -30,7 +32,7 @@ Portfolio-Website für den nebenberuflichen Webdesign-Service "GregsWebdesign" (
 - Kontaktformular läuft über **Formspree** (Endpoint-ID `mvkpallz`), sendet an obige Mail
 - Hosting: **Netlify**, Account-Login-Mail `info.gregswebdesign@gmail.com` (gewechselt von `gregorygygli@gmail.com`)
 - Deployment: **automatisch über GitHub** (Continuous Deployment, Branch `master`, Publish directory `.`) — kein manuelles Drag & Drop mehr nötig, einfach `git push`
-- Farbschema Hauptseite: hell, Blau-Akzent (#2A4CE0). Alle Demo-Projekte: dunkel, je eigener Akzent (siehe Struktur oben) zur optischen Unterscheidung
+- Farbschema Hauptseite: hell, Blau-Akzent (#2A4CE0). Demo-Projekte: 3 dunkel + 1 hell (Damensalon), je eigener Akzent (siehe Struktur oben) zur optischen Unterscheidung
 - Für Videos/grosse Bilder in Demo-Projekten: **ffmpeg** ist lokal installiert (winget, User-Scope) — vor dem Commit grosse 4K-Videos/Bilder komprimieren (z.B. `-vf scale=1280:720 -crf 27 -an`), sonst wird das Repo unnötig aufgebläht
 
 ## Offene Punkte / als Nächstes geplant
