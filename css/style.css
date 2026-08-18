@@ -507,6 +507,7 @@ section { position: relative; }
 .thumb-barber { background: linear-gradient(135deg, #232526, #414345); }
 .thumb-detailing { background: linear-gradient(135deg, #1D2B3A, #2A4CE0); }
 .thumb-trainer { background: linear-gradient(135deg, #1B1D22, #3C4B64); }
+.thumb-salon { background: linear-gradient(135deg, #6B3A42, #B8757F); }
 .portfolio-thumb::after {
   content: "";
   position: absolute;
