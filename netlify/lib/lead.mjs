@@ -25,7 +25,8 @@ export function leadFromSubmission(data, meta = {}) {
   const email = line(data.email, 200).toLowerCase();
   const message = text(data.message, 4000);
 
-  if (!name || !EMAIL_RE.test(email) || message.length < 5) return null;
+  // Kurze Nachrichten bleiben erlaubt: lieber ein Test-Eintrag zu viel als eine echte Anfrage verloren.
+  if (!name || !EMAIL_RE.test(email) || !message) return null;
   if ((message.match(/https?:\/\//gi) || []).length > 2) return null; // typischer Link-Spam
 
   const now = new Date().toISOString();
@@ -64,27 +65,6 @@ export async function sendPush(env, { title, message, click }, fetchImpl = fetch
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
-  });
-  return { sent: res.ok, status: res.status };
-}
-
-// Schickt die Anfrage als Mail an dich (ueber Formspree, derselbe Weg wie frueher).
-// Nur fuer echte Anfragen, Spam wird vorher aussortiert. Die Endpoint-ID ist nicht geheim.
-export async function sendMail(env, lead, fetchImpl = fetch) {
-  const endpoint = String(env.FORMSPREE_ENDPOINT || 'https://formspree.io/f/mvkpallz');
-  const res = await fetchImpl(endpoint, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify({
-      _subject: `Neue Website-Anfrage von ${lead.name}`,
-      name: lead.name,
-      company: lead.company,
-      email: lead.email,
-      phone: lead.phone,
-      type: lead.type,
-      budget: lead.budget,
-      message: lead.message,
-    }),
   });
   return { sent: res.ok, status: res.status };
 }
