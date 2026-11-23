@@ -486,7 +486,11 @@
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvkpallz" method="POST" novalidate>
+          <form class="contact-form" id="contactForm" name="kontakt" action="/" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="kontakt">
+            <p class="hp-field" aria-hidden="true">
+              <label>Dieses Feld nicht ausfüllen <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="form-grid">
               <div class="field full">
                 <label for="name">Name *</label>

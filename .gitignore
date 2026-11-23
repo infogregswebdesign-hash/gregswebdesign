@@ -3,3 +3,6 @@ Thumbs.db
 .DS_Store
 desktop.ini
 Akquise/
+node_modules/
+.netlify/
+Admin-Lokal/

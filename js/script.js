@@ -129,38 +129,45 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Wird gesendet …';
 
-      const endpoint = form.getAttribute('action') || '';
-      const isConfigured = endpoint.includes('formspree.io') && !endpoint.includes('DEINE-FORMSPREE-ID');
+      // Hauptweg: Netlify Forms (Anfrage landet im lokalen Admin, Push aufs Handy).
+      // Reserve: Formspree, falls Netlify nicht antwortet, damit keine Anfrage verloren geht.
+      const FALLBACK_ENDPOINT = 'https://formspree.io/f/mvkpallz';
+      const data = new FormData(form);
 
-      if (!isConfigured) {
-        // Formspree-Endpoint noch nicht eingetragen: Formular wird nur simuliert.
-        setTimeout(() => {
-          showStatus('Formular ist noch nicht mit Formspree verbunden. Bitte Endpoint in index.html eintragen.', 'error');
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalLabel;
-        }, 400);
-        return;
-      }
-
-      try {
-        const response = await fetch(endpoint, {
+      const viaNetlify = async () => {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString(),
+        });
+        return response.ok;
+      };
+      const viaFormspree = async () => {
+        const copy = new FormData(form);
+        copy.delete('form-name');
+        copy.delete('bot-field');
+        const response = await fetch(FALLBACK_ENDPOINT, {
           method: 'POST',
           headers: { Accept: 'application/json' },
-          body: new FormData(form),
+          body: copy,
         });
+        return response.ok;
+      };
 
-        if (response.ok) {
-          showStatus('Danke für deine Anfrage! Ich melde mich so schnell wie möglich bei dir.', 'success');
-          form.reset();
-        } else {
-          showStatus('Da ist etwas schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt per E-Mail.', 'error');
-        }
-      } catch (err) {
-        showStatus('Da ist etwas schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt per E-Mail.', 'error');
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
+      let sent = false;
+      try { sent = await viaNetlify(); } catch (err) { sent = false; }
+      if (!sent) {
+        try { sent = await viaFormspree(); } catch (err) { sent = false; }
       }
+
+      if (sent) {
+        showStatus('Danke für deine Anfrage! Ich melde mich so schnell wie möglich bei dir.', 'success');
+        form.reset();
+      } else {
+        showStatus('Da ist etwas schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt per E-Mail.', 'error');
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
     });
   }
 })();

@@ -1056,3 +1056,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .footer-nav { gap: 32px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+/* Honeypot gegen Spam-Bots: fuer Menschen unsichtbar */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
