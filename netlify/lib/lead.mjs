@@ -68,6 +68,27 @@ export async function sendPush(env, { title, message, click }, fetchImpl = fetch
   return { sent: res.ok, status: res.status };
 }
 
+// Schickt die Anfrage als Mail an dich (ueber Formspree, derselbe Weg wie frueher).
+// Nur fuer echte Anfragen, Spam wird vorher aussortiert. Die Endpoint-ID ist nicht geheim.
+export async function sendMail(env, lead, fetchImpl = fetch) {
+  const endpoint = String(env.FORMSPREE_ENDPOINT || 'https://formspree.io/f/mvkpallz');
+  const res = await fetchImpl(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      _subject: `Neue Website-Anfrage von ${lead.name}`,
+      name: lead.name,
+      company: lead.company,
+      email: lead.email,
+      phone: lead.phone,
+      type: lead.type,
+      budget: lead.budget,
+      message: lead.message,
+    }),
+  });
+  return { sent: res.ok, status: res.status };
+}
+
 export function leadPushText(lead) {
   const who = lead.company ? `${lead.name} (${lead.company})` : lead.name;
   const extra = [lead.type, lead.budget].filter(Boolean).join(', ');

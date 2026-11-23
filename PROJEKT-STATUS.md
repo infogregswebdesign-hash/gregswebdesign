@@ -23,7 +23,7 @@ Portfolio-Website für den nebenberuflichen Webdesign-Service "GregsWebdesign" (
 - `Bilder_beispiel_webseite/` — Rohbilder (lizenzfreie Pexels-Fotos) für die Barbershop-Demo
 - `robots.txt`, `sitemap.xml` — für Google-Indexierung (siehe SEO-Abschnitt unten)
 - `Akquise/Akquise-Tracker.xlsx` — Excel mit Tab "Übersicht" (automatische Zählungen per Formel) und Tab "Akquise-Tracker" (Liste aller angeschriebenen Firmen). **Nicht in Git** (lokale Arbeitsdatei, nur auf diesem Rechner, kein Grund sie zu committen)
-- `netlify/functions/submission-created.mjs` + `netlify/lib/lead.mjs` — kleine Netlify-Funktion: schickt bei einer echten Formular-Anfrage eine Push-Nachricht aufs Handy (ntfy). Speichert nichts. Kein Secret im Code, das Topic kommt aus der Netlify-Umgebungsvariable `NTFY_TOPIC`.
+- `netlify/functions/submission-created.mjs` + `netlify/lib/lead.mjs` — kleine Netlify-Funktion: schickt bei einer echten Formular-Anfrage eine Mail (Formspree) und eine Push-Nachricht aufs Handy (ntfy). Speichert nichts. Kein Secret im Code, das Topic kommt aus der Netlify-Umgebungsvariable `NTFY_TOPIC`.
 - `Admin-Lokal/` — **nur lokal, in .gitignore, nie hochladen**: Verwaltungsseite für Anfragen und Projekte (Start mit `Start.bat`, http://localhost:4310, Login per Passwort). Enthält `.env` (Passwort, Netlify-Token, Topic) und `daten/projekte.json` (die Daten). Anleitung in `Admin-Lokal/LIESMICH.txt`.
 - ` - Deploy` Ordner (Geschwisterordner, nicht in Git) — schlanke Kopie zum manuellen Hochladen auf Netlify (veraltet, seit Git-Auto-Deploy nicht mehr nötig, siehe unten)
 - ` - Backup 2026-08-11` Ordner (Geschwisterordner) — Sicherungskopie vor grösseren Design-Änderungen
@@ -62,7 +62,7 @@ Gregory schreibt aktiv lokale Betriebe ohne eigene Website an (Fokus bisher: Coi
 
 ## Anfragen-Verwaltung (Admin lokal, gebaut 2026-11-23)
 Ziel: Anfragen vom Kontaktformular sauber verwalten, ohne dass die Verwaltung im Internet steht.
-- **Weg einer Anfrage:** Besucher sendet Formular auf der Website → Netlify Forms speichert es (Quelle der Wahrheit) → Funktion `submission-created` filtert Spam und schickt Push aufs Handy (ntfy-App) → die lokale Admin-Seite holt die Anfrage per Netlify-API ab (`NETLIFY_TOKEN` in `Admin-Lokal/.env`) und zeigt sie in der Projektliste.
+- **Weg einer Anfrage:** Besucher sendet Formular auf der Website → Netlify Forms speichert es (Quelle der Wahrheit) → Funktion `submission-created` filtert Spam und schickt bei echten Anfragen eine **Mail an Gregorys Gmail (über Formspree, wie früher)** und einen Push aufs Handy (ntfy-App), beides unabhängig voneinander → die lokale Admin-Seite holt die Anfrage per Netlify-API ab (`NETLIFY_TOKEN` in `Admin-Lokal/.env`) und zeigt sie in der Projektliste.
 - **Nur echte Anfragen:** nur das Formular `kontakt` löst Push aus. Verworfen werden: Honeypot ausgefüllt, ungültige Mail, Nachricht unter 5 Zeichen, mehr als 2 Links in der Nachricht. Mails von Instagram o.ä. kommen nie an, weil es keinen Mail-Weg gibt.
 - **Status pro Eintrag:** Neue Anfrage, Offerte geschickt, Ich bin dran, Wartet auf Kunde, Fertig, Abgesagt. Preis und Notizen pro Projekt, Projekte lassen sich auch von Hand anlegen.
 - **Sicherheit lokal:** nur auf 127.0.0.1 erreichbar, Login mit Passwort (Cookie HttpOnly/SameSite=Strict, nach 5 Fehlversuchen 10 Minuten Sperre), Schutz gegen fremde Webseiten (Host-/Origin-Prüfung, eigener Header).
